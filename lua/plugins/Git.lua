@@ -55,12 +55,16 @@ return {
 			},
 		},
 	},
+
 	require("telescope").setup({
 		defaults = {
 			file_ignore_patterns = {
-				"%.git/", -- ignore .git directory
-				"%.gitignore", -- ignore .gitignore files
+				"%.git/",
+				"%.git/*",
+			--	"%.gitignore",
 			},
 		},
+		pickers = {},
+		extensions = {},
 	}),
 }
